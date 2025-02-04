@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Collage</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Collage</h1>
+        <p>click to see full image</p>
+    </header>
+    <main>
+        <div class="collage">
+            <div class="collage-item">
+                <img src="images/620.930.jpg" alt="Image 1" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/620.930(2).jpg" alt="Image 2" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/620.930(3).jpg" alt="Image 3" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/607.911.jpg" alt="Image 4" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/620.931.jpg" alt="Image 5" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/720.971.jpg" alt="Image 6" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/810.1080.JPG" alt="Image 7" class="collage-image">
+            </div>
+            <!-- <div class="collage-item">
+                <img src="images/870.1088.JPG" alt="Image 8" class="collage-image">
+            </div> -->
+            <div class="collage-item">
+                <img src="images/872.491.jpg" alt="Image 9" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/873.490.jpg" alt="Image 10" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/1104.620.jpg" alt="Image 11" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/1437.2156.jpg" alt="Image 12" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/2098.2712.jpg" alt="Image 13" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/2412.1080.jpg" alt="Image 14" class="collage-image">
+            </div>
+            <div class="collage-item">
+                <img src="images/3120.4160.jpg" alt="Image 15" class="collage-image">
+            </div>
+        </div>
+    </div>
+    <div class="special-video">
+        <button id="special-video-btn">it's not the end (click here)</button>
+    </div>
+</main>
+<div id="image-modal" class="image-modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <img class="modal-content" id="modal-image">
+</div>
+<script src="scripts.js"></script>
+
+<script>
+    // Add an event listener to the button to redirect when clicked
+    const specialVideoButton = document.getElementById('special-video-btn');
+
+    specialVideoButton.addEventListener('click', function() {
+        // Replace with the URL you want to redirect to
+        window.location.href = 'wish/index.html'; // Change this to your desired URL
+    });
+</script>
+</body>
+</html>

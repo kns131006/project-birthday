@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the minimum size */
+  gap: 15px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.collage-item {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collage-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.collage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.collage-item:hover .collage-image {
+  opacity: 0.8;
+}
+
+.special-video {
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+#special-video-btn {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#special-video-btn:hover {
+  background-color: #666;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design: Adjustments for Smaller Screens */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  header {
+      padding: 15px 0;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .collage {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Reduce the size */
+      gap: 10px;
+  }
+
+  #special-video-btn {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
+  header {
+      padding: 10px 0;
+  }
+
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  .collage {
+      grid-template-columns: 1fr; /* One column layout */
+      gap: 8px;
+  }
+
+  .collage-item {
+      border-radius: 8px;
+  }
+
+  #its-not-end {
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+
+  .modal-content {
+      max-width: 95%;
+      max-height: 90%;
+  }
+}
+
+/* For Large Screens (Laptop/Desktop) */
+@media (min-width: 1024px) {
+  .collage {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Increase the min size on large screens */
+      gap: 20px;
+  }
+
+  .collage-item {
+      max-width: 350px; /* Set a maximum width to prevent too large images */
+  }
+}

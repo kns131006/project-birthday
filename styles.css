@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe4e1, #ffd700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Welcome Message Section */
+.welcome-message p {
+  font-size: 1.5rem;
+  color: #ff4500;
+  margin: 20px 0;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#start-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #ff4500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#start-btn:hover {
+  background: #ff6347;
+}
+
+/* Decorations Section */
+.decorations p {
+  font-size: 1.2rem;
+  color: #4caf50;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+#decoration-area {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Balloon Styling */
+.balloon {
+  font-size: 3rem;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.balloon:hover {
+  transform: scale(1.1);
+}
+
+/* Ribbon Styling */
+.banner {
+  font-size: 3rem;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}
+
+/* Ribbon Image Animation */
+/* Ribbon animation from top to center */
+@keyframes ribbonAnimation {
+  0% {
+    top: -150px; /* Start above the screen */
+  }
+  100% {
+    top: -75px; /* End at the desired position (adjust this value as needed) */
+  }
+}
+
+/* Class that applies animation to the ribbon image */
+.ribbon-animation {
+  animation: ribbonAnimation 2s ease forwards;
+}
+
+/* Styling for the ribbon image */
+#ribbon-container img {
+  position: absolute;
+  width: 1000px; /* Adjust the size as per your needs */
+  height: 500px;
+}
+
+
+/* Memories Button */
+#memories-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+#memories-btn:hover {
+  background: #45a049;
+}
+
+/* Balloon Animation */
+@keyframes balloonAnimation {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}

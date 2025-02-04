@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Kittu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Welcome Message -->
+    <div class="welcome-message" id="welcome-message">
+      <p>🎉 Welcome to your Birthday Adventure! 🎂 Let’s Start the Party!</p>
+      <button id="start-btn">Start Celebration</button>
+    </div>
+
+    <!-- Decorations Phase -->
+    <div class="decorations" id="decorations" style="display:none;">
+      <p>🎨 Let’s add some decorations!</p>
+      <div id="decoration-area">
+        <div id="balloon-container">
+          <!-- Single balloon button with icon only -->
+          <div class="balloon" id="balloon-btn" onclick="createBalloons()">🎈</div>
+        </div>
+        <div id="ribbon-container">
+          <div class="banner" id="ribbon-btn" onclick="showRibbon()">🎀</div>
+        </div>
+      </div>
+      <button id="memories-btn" style="display: none;" onclick="window.location.href='testing/index.html'">Let's Visit Some Memories</button> <!-- Hidden initially -->
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
